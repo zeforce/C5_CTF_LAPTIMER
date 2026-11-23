@@ -1,5 +1,6 @@
 #include <assert.h>
 #include <stdio.h>
+#include <string.h>
 #include "../firmware/c3_controller/main/game.h"
 #include "../firmware/common/fpv_channels.h"
 #include "../firmware/c3_controller/main/game_identity.h"
