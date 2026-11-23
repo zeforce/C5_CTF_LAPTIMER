@@ -2,9 +2,9 @@
 
 1. 按接线文档连接，分别构建安装C5、C3；C3 USB控制台115200。先发送`diag`、`service`、`slots`查看通信。RF就绪只是初始化/采样状态，不证明存在图传。
 2. 新手机在待机/结束状态发送`blepair`，120秒内连接并接受系统配对。已有绑定可重连；`blebonds`查身份，`blerepair`开启本地修复窗口。业务特征要求加密，最多一个手机。实体按钮默认未接。
-3. 本仓库没有手机UI，请按BLE协议自建客户端；无手机也能用串口检查`game`、`gameconfig`、`gamepage N`、`network`、`netpage N`、`io`。`gametest`返回开机合成规则检查，不改现场场次，不是RF测试。
+3. 客户端接入见[BLE协议](protocols/c3-ble.md)；串口可检查`game`、`gameconfig`、`gamepage N`、`network`、`netpage N`、`io`。`gametest`返回开机合成规则检查，不改现场场次，不是RF测试。
 4. ESP-NOW配置：串口`net ROLE CHANNEL NETWORK_ID KEY32HEX HOST12HEX`保存并重启。role0独立/1主机/2成员，信道1..13；所有节点同network/16字节密钥，成员填主机STA MAC（12位十六进制无冒号）。占位符必须替换，勿共享真实密钥。成员只开ESP-NOW，配置后可用串口维护。
-5. `netmode N`选0..5模式，`netsync`下发已保存整套规则，`netready`预检。`gameaction 1`新场、2继续、3暂停、0结束；真实开场受在线、观测、校准、时钟等条件保护。不能绕过质量检查来把无RF演示当计分。
+5. `netmode N`选0..5模式，`netsync`下发已保存整套规则，`netready`预检。`gameaction 1`新场、2继续、3暂停、0结束；真实开场受在线、观测、校准、时钟等条件保护。
 6. 各槽增益/门限和校准单独配置，比赛规则同步不复制主机RF设置。寻机使用BLE opcode53锁频道；声光开关/亮度使用38；引脚为板级编译配置。
 
 `protocoltest`、`eventwatch`、扫描/采集、故障注入和清结果等维护命令可能改变校准/队列/配置；不要在正式比赛运行时随意调用。串口命令分支在C3 main.c，应用与串口都不应把“已接收”视为“已执行成功”。

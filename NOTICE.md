@@ -11,10 +11,10 @@ Official project site: https://twotoz.github.io/C5VRX/
 
 ## Gameplay and interaction references
 
-SeekND/CaptureTheFlag by Carlos Costa / SeekND and contributors: https://github.com/SeekND/CaptureTheFlag , studied revision b5de9b794e0d2f3903c35ddcda7af0925f34560f (0.8a source contains MIT notices). Gameplay concepts were studied; no upstream program source is included in this publication.
+SeekND/CaptureTheFlag by Carlos Costa / SeekND and contributors: https://github.com/SeekND/CaptureTheFlag , studied revision b5de9b794e0d2f3903c35ddcda7af0925f34560f (0.8a source contains MIT notices). Reference for gameplay rules.
 
-LouisHitchcock/FPVGate: https://github.com/LouisHitchcock/FPVGate . Configuration and signal-chart interaction concepts were consulted; no program source or UI assets from it are included here.
+LouisHitchcock/FPVGate: https://github.com/LouisHitchcock/FPVGate . Reference for configuration and signal-chart interactions.
 
 ## External SDK
 
-ESP-IDF v6.0.2: https://github.com/espressif/esp-idf . Its components, bundled third-party code and binary libraries retain their own licenses, including Apache-2.0 and component-specific terms. This repository does not vendor the SDK or PHY archive and does not relicense those dependencies. Review their notices when redistributing SDK material or firmware. See docs/build.md and docs/licensing.md.
+ESP-IDF v6.0.2: https://github.com/espressif/esp-idf . Its components, bundled third-party code and binary libraries retain their own licenses, including Apache-2.0 and component-specific terms. Review their notices when redistributing SDK material or firmware. See docs/build.md and docs/licensing.md.

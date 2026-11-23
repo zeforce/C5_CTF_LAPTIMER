@@ -39,7 +39,7 @@ READY高允许一个事务，完成后先观察低再等待高；C5低保持至�
 
 ## 参数与能力
 
-channel=0..63，gain=0..63，enter>=exit+当前min_peak_delta（宽整数比较），confirm_ms=1..1000。C5内置R5 index36 / gain52 / enter20 / exit10 / confirm30ms。C5配置仅运行期保存，C3持久化期望参数并在发现/恢复后重下发；现场设置不得从示例默认值推断。
+channel=0..63，gain=0..63，enter>=exit+当前min_peak_delta（宽整数比较），confirm_ms=1..1000。C5内置R5 index36 / gain52 / enter20 / exit10 / confirm30ms。C5配置仅运行期保存，C3持久化期望参数并在发现/恢复后重下发；实际参数以回读为准。
 
 LIMITS默认10 / 100 / 500 / 3 / 3000；范围：周期10..1000ms且为10倍数，削顶1..1000‰，变化比例0..1000‰，最小峰差>=1且<=当前enter-exit，保持100..60000ms。
 
@@ -75,4 +75,4 @@ status：0 OK、1 BAD_VERSION、2 BAD_LENGTH、3 BAD_CRC、4 BAD_COMMAND、5 BUS
 
 ## 当前验证边界
 
-双C5基本SPI通信已跑通；真实RF共存、长期事件精度和完整硬件故障验收另计。CLOCK在命令处理时采样，主机事务前后时间给出偏移区间，不宣称亚毫秒精度。正常固件不启用合成检测测试入口。源码实现与本提交测试为准，见[验证范围](../validation.md)。
+CLOCK在命令处理时采样，主机可用事务前后时间估计偏移区间。硬件验证进度见[验证范围](../validation.md)。
