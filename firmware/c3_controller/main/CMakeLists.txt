@@ -1,0 +1,2 @@
+idf_component_register(SRCS "main.c" "event_service.c" "node_time.c" "storage_fault.c" "node_spi.c" "lap_timer.c" "game.c" "game_page.c" "match.c" "result_record.c" "network.c" "network_roster.c" "network_guard.c" "start_schedule.c" "ble_control.c" "feedback.c" "io_service.c" "ws2812_output.c"
+    INCLUDE_DIRS "." REQUIRES esp_driver_spi esp_driver_gpio esp_driver_rmt esp_driver_usb_serial_jtag esp_timer bt nvs_flash esp_wifi esp_netif esp_event mbedtls esp_coex)

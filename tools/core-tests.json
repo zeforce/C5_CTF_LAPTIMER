@@ -1,0 +1,118 @@
+{
+  "network_config": [],
+  "network_provision": [],
+  "ble_connection": [],
+  "ble_authorization": [],
+  "ble_bond_command": [],
+  "command_policy": [],
+  "receiver_poll_step": [
+    "event_service",
+    "node_time"
+  ],
+  "node_poll_guard": [],
+  "config_transfer": [],
+  "schedule_abort": [
+    "start_schedule"
+  ],
+  "event_delivery": [
+    "event_service",
+    "node_time"
+  ],
+  "event_service": [
+    "event_service",
+    "node_time"
+  ],
+  "event_mux": [
+    "event_service",
+    "node_time"
+  ],
+  "event_host_time": [],
+  "event_transport": [],
+  "feedback": [
+    "feedback"
+  ],
+  "game": [
+    "game",
+    "lap_timer"
+  ],
+  "game_feedback": [
+    "game",
+    "lap_timer",
+    "feedback"
+  ],
+  "game_selftest": [
+    "game",
+    "lap_timer"
+  ],
+  "game_page": [
+    "game_page",
+    "game",
+    "lap_timer"
+  ],
+  "game_receiver": [
+    "game",
+    "lap_timer",
+    "event_service",
+    "node_time"
+  ],
+  "game_signal": [
+    "game",
+    "lap_timer"
+  ],
+  "lap_timer": [
+    "lap_timer"
+  ],
+  "match": [
+    "match"
+  ],
+  "match_verdict": [],
+  "match_flow": [
+    "game",
+    "lap_timer",
+    "match",
+    "result_record"
+  ],
+  "member_stop": [],
+  "network_events": [],
+  "network_guard": [
+    "network_guard"
+  ],
+  "network_roster": [
+    "network_roster"
+  ],
+  "network_sequence": [],
+  "network_identity": [],
+  "network_score": [],
+  "network_clock": [],
+  "node_time": [
+    "node_time"
+  ],
+  "result_record": [
+    "result_record"
+  ],
+  "result_settle": [],
+  "start_schedule": [
+    "start_schedule"
+  ],
+  "receiver_events": [
+    "event_service",
+    "node_time"
+  ],
+  "receiver_poll": [
+    "event_service",
+    "node_time"
+  ],
+  "receiver_restore": [
+    "event_service",
+    "node_time"
+  ],
+  "receiver_scan": [],
+  "receiver_service": [
+    "event_service",
+    "node_time"
+  ],
+  "node_slot_pins": [],
+  "node_spi_budget": [],
+  "storage_fault": [],
+  "ws2812_frame": []
+}

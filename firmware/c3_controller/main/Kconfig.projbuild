@@ -1,0 +1,32 @@
+menu "C3 receiver hardware"
+config C3_DUAL_C5
+    bool "Attach second C5 (CS=0 READY=1, polled events)"
+    default n
+endmenu
+
+menu "C3 feedback hardware"
+config C3_FEEDBACK_LED_GPIO
+    int "Status LED GPIO (-1 disables)"
+    range -1 21
+    default -1
+config C3_FEEDBACK_BUZZER_GPIO
+    int "Active buzzer GPIO (-1 disables)"
+    range -1 21
+    default -1
+config C3_FEEDBACK_BUTTON_GPIO
+    int "Active-low button GPIO (-1 disables)"
+    range -1 21
+    default -1
+config C3_FEEDBACK_WS2812_GPIO
+    int "WS2812 data GPIO (-1 disables)"
+    range -1 21
+    default -1
+config C3_FEEDBACK_WS2812_COUNT
+    int "WS2812 LED count"
+    range 1 32
+    default 1
+config C3_FEEDBACK_WS2812_BRIGHTNESS
+    int "WS2812 brightness (0..255)"
+    range 0 255
+    default 32
+endmenu
